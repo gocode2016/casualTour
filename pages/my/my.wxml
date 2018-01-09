@@ -1,0 +1,17 @@
+<!--pages/my/my.wxml-->
+
+<view class="container">
+  <view class="userinfo">
+    <view class='user-box'>
+       <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    </view>
+  </view>
+
+  <view class='list'>
+    <view class='item' wx:for="{{list}}" wx:key="unique">
+      <view class="{{item.icon}}"><text class='txt'>{{item.text}}</text></view>
+      <text class='iconfont icon-icon'></text>
+    </view>
+  </view>
+</view>
