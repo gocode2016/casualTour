@@ -1,21 +1,115 @@
 /**index.wxss**/
-.userinfo {
+.header{
+  width: 100%;
+  position: fixed;
+  left: 0;
+  top:0;
+}
+.input-box{
+  border: 1px solid #eee;
+  background-color: #eee;
+  margin: 0 10rpx;
+  text-align: center;
+  border-radius: 20rpx;
+  height: 60rpx;
+  font-size: 35rpx;
   display: flex;
-  flex-direction: column;
   align-items: center;
+  justify-content: center;
 }
-
-.userinfo-avatar {
-  width: 128rpx;
-  height: 128rpx;
-  margin: 20rpx;
+.search-input{
+  width: 100%;
+}
+.swiper{
+  margin-top: 80rpx;
+  height: 400rpx;
+  width: 100%;
+}
+.swiper image {
+ height: 100%;
+ width: 100%;
+}
+scroll-view{
+  margin: 30rpx 0 20rpx 0;
+}
+scroll-view .item{
+  display: inline-block;
+  margin-left: 60rpx;
+  text-align: center
+}
+scroll-view .first-item{
+  margin-left: 40rpx;
+}
+scroll-view .item .iconfont{
+  font-size: 50rpx;
+}
+scroll-view .item text{
+  font-size: 30rpx;
+}
+.item>view{
+  width: 90rpx;
+  height: 90rpx;
   border-radius: 50%;
+  text-align: center;
+  line-height: 90rpx;
 }
-
-.userinfo-nickname {
-  color: #aaa;
+.ski view{
+  border: 1px solid #3e81ff;
 }
-
-.usermotto {
-  margin-top: 200px;
+.ski .iconfont{
+  color: #3e81ff;
+}
+.onfoot view{
+  border: 1px solid #a8ee7d;
+}
+.onfoot .iconfont{
+  color: #a8ee7d;
+}
+.rock view{
+  border: 1px solid #f3415e;
+}
+.rock .iconfont{
+  color: #f3415e;
+}
+.mountain view{
+  border: 1px solid #cd9854;
+}
+.mountain .iconfont{
+  color: #cd9854;
+}
+.drive view{
+  border: 1px solid #eb99dd;
+}
+.drive .iconfont{
+  color: #eb99dd;
+}
+.match view{
+  border: 1px solid #6581a8;
+}
+.match .iconfont{
+  color: #6581a8;
+}
+.sight{
+  position: relative;
+  height: 320rpx;
+  border: 1px solid blue;
+}
+.sight image{
+  height: 320rpx;
+  position: absolute;
+  left: 0;
+  top:0;
+  z-index: -1;
+}
+.sight img-caption{
+  position: absolute;
+  z-index: 100;
+  height: 200rpx;
+  border: 1px solid red;
+  /* display: flex;
+  justify-content: space-between;
+  align-items: center;  */
+}
+.sight text{
+  color:#fff;
 }

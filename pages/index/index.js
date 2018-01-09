@@ -1,54 +1,42 @@
 //index.js
-//获取应用实例
 const app = getApp()
-
+var order = ['red', 'yellow', 'blue', 'green', 'red']
 Page({
   data: {
-    motto: 'Hello World',
-    userInfo: {},
-    hasUserInfo: false,
-    canIUse: wx.canIUse('button.open-type.getUserInfo')
+    imgUrls: [
+      'http://img02.tooopen.com/images/20150928/tooopen_sy_143912755726.jpg',
+      'http://img06.tooopen.com/images/20160818/tooopen_sy_175866434296.jpg',
+      'http://img06.tooopen.com/images/20160818/tooopen_sy_175833047715.jpg'
+    ],
+    indicatorDots: true,
+    autoplay: true,
+    interval: 3000,
+    duration: 800,
+    toView: 'red',
+    scrollTop: 100
   },
-  //事件处理函数
-  bindViewTap: function() {
-    wx.navigateTo({
-      url: '../logs/logs'
-    })
+  upper: function (e) {
+    console.log(e)
   },
-  onLoad: function () {
-    if (app.globalData.userInfo) {
-      this.setData({
-        userInfo: app.globalData.userInfo,
-        hasUserInfo: true
-      })
-    } else if (this.data.canIUse){
-      // 由于 getUserInfo 是网络请求，可能会在 Page.onLoad 之后才返回
-      // 所以此处加入 callback 以防止这种情况
-      app.userInfoReadyCallback = res => {
+  lower: function (e) {
+    console.log(e)
+  },
+  scroll: function (e) {
+    console.log(e)
+  },
+  tap: function (e) {
+    for (var i = 0; i < order.length; ++i) {
+      if (order[i] === this.data.toView) {
         this.setData({
-          userInfo: res.userInfo,
-          hasUserInfo: true
+          toView: order[i + 1]
         })
+        break
       }
-    } else {
-      // 在没有 open-type=getUserInfo 版本的兼容处理
-      wx.getUserInfo({
-        success: res => {
-          app.globalData.userInfo = res.userInfo
-          this.setData({
-            userInfo: res.userInfo,
-            hasUserInfo: true
-          })
-        }
-      })
     }
   },
-  getUserInfo: function(e) {
-    console.log(e)
-    app.globalData.userInfo = e.detail.userInfo
+  tapMove: function (e) {
     this.setData({
-      userInfo: e.detail.userInfo,
-      hasUserInfo: true
+      scrollTop: this.data.scrollTop + 10
     })
   }
 })

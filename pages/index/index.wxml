@@ -1,14 +1,63 @@
 <!--index.wxml-->
-<view class="container">
-  <view class="userinfo">
-    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
-    <block wx:else>
-      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
-      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
-    </block>
+<!--搜索头部-->
+  <view class="header">
+    <view class="input-box">
+      <input placeholder="活动搜索" maxlength="10" confirm-type="search" class="search-input" focus/>
+    </view>
   </view>
-  <view class="usermotto">
-    <text class="iconfont icon-tubu">123</text>
-    <text class="user-motto">{{motto}}</text>
+<!--轮播-->
+  <swiper indicator-dots="{{indicatorDots}}"
+          autoplay="{{autoplay}}" 
+          interval="{{interval}}" 
+          duration="{{duration}}"
+          indicator-active-color="#36d9ba"
+          circular="true"
+          class="swiper"
+          >
+  <block wx:for="{{imgUrls}}" wx:key="">
+    <swiper-item>
+      <image src="{{item}}" class="slide-image"/>
+    </swiper-item>
+  </block>
+</swiper>
+<!--左右滑动区域-->
+<scroll-view scroll-x="true" style="width: 100%;white-space:nowrap; display:flex">
+  <view class="ski item first-item">
+    <view><i class="iconfont icon-huaxue"></i></view>
+    <text>滑雪</text>
+  </view>
+  <view class="onfoot item">
+    <view><i class="iconfont icon-tubulvxing"></i></view>
+    <text>徒步</text>
+  </view>
+  <view class="rock item">
+    <view><i class="iconfont icon-panyan"></i></view>
+    <text>攀岩</text>
+  </view>
+  <view class="mountain item">
+    <view><i class="iconfont icon-dengshan01"></i></view>
+    <text>登山</text>
+  </view>
+   <view class="drive item">
+    <view><i class="iconfont icon-zijia"></i></view>
+    <text>自驾</text>
+  </view> 
+   <view class="match item">
+    <view><i class="iconfont icon-saishi"></i></view>
+    <text>赛事</text>
+  </view>
+</scroll-view>
+<!--图片区域-->
+<view class='sight'>
+    <image src="../../assets/imgs/sight1.jpg"></image>  
+  <view class='img-caption'>
+     <view>
+      <view>
+        <text>周边游</text>
+        <text>牛背上看日出</text>
+      </view>
+      <text>3日 01.12-01.14</text>
+     </view>
+     <view><text>580元/人</text></view>
   </view>
 </view>
