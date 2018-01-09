@@ -34,12 +34,11 @@
 
 .list {
   width: 100%;
-
 }
 .item {
     margin: 0 10rpx;
   font-size: 18rpx;
-  border-bottom:1px solid gray; 
+  border-bottom:1px solid #dfe2e5; 
   height: 120rpx;
   display: flex;
   justify-content: space-between;
