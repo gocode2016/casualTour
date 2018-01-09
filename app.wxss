@@ -8,3 +8,45 @@
   padding: 200rpx 0;
   box-sizing: border-box;
 } 
+/**字体图标库**/
+
+@font-face {
+  font-family: 'iconfont';  /* project id 535962 */
+  src: url('//at.alicdn.com/t/font_535962_k33sukkvuklkrzfr.eot');
+  src: url('//at.alicdn.com/t/font_535962_k33sukkvuklkrzfr.eot?#iefix') format('embedded-opentype'),
+  url('//at.alicdn.com/t/font_535962_k33sukkvuklkrzfr.woff') format('woff'),
+  url('//at.alicdn.com/t/font_535962_k33sukkvuklkrzfr.ttf') format('truetype'),
+  url('//at.alicdn.com/t/font_535962_k33sukkvuklkrzfr.svg#iconfont') format('svg');
+}
+
+.iconfont {
+  font-family:"iconfont" !important;
+  font-size:16px;
+  font-style:normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-huaxue:before { content: "\e67b"; }
+
+.icon-panyan:before { content: "\e60c"; }
+
+.icon-guanyuwomen:before { content: "\e62a"; }
+
+.icon-dengshan01:before { content: "\e6ca"; }
+
+.icon-zijia:before { content: "\e71e"; }
+
+.icon-saishi:before { content: "\e633"; }
+
+.icon-wodehuodong:before { content: "\e60e"; }
+
+.icon-tubulvxing:before { content: "\e625"; }
+
+.icon-wodeziliao:before { content: "\e69e"; }
+
+.icon-wode:before { content: "\e661"; }
+
+.icon-tubu:before { content: "\e612"; }
+
+

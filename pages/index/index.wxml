@@ -8,6 +8,7 @@
     </block>
   </view>
   <view class="usermotto">
+    <text class="iconfont icon-tubu">123</text>
     <text class="user-motto">{{motto}}</text>
   </view>
 </view>
