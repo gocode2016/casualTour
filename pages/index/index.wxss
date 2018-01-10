@@ -7,6 +7,7 @@
   z-index: 200;
   background-color: #fff;
 }
+
 .input-box{
   border: 1px solid #eee;
   background-color: #eee;

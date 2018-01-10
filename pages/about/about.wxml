@@ -1,0 +1,30 @@
+<!--pages/about/about.wxml-->
+<view class="container">
+   <view class='cpy'>
+        四川牧夫科技有限公司是一家具有   户外运动基因的互联网公司，成立于2015年秋，致力于我们热爱的行业，专注我们擅长的领域，希望通过我们的产品让户外运动变得更容易、更安全、同时也能让更多的人回归自然，享受生活！
+   </view>
+   <view class='sation '>
+      
+      <view class="f2">
+      <label>联系电话：</label>
+      <text style='color:blue;'>028-623312313</text>
+      </view>
+
+      <view class="f2"> 
+      <label>电子邮件：</label>
+      <text>service@movetechx.com</text>
+      </view>
+
+   </view>
+
+   <view class='sation footer'>
+     <image src="../../assets/imgs/logo.png" style="width:68px;height:64px;"></image>
+     <view>
+        <view class="ft">
+           <text>牧夫科技版权所有</text>
+            <text>Copyright@2015-2016 Movetechx.</text>
+            <text> All Rights Reserved</text>
+        </view>
+     </view>
+   </view>
+</view>

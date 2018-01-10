@@ -1,6 +1,6 @@
 /* pages/info/info.wxss */
 page {
-  background: #ebebeb;
+  background: #f7f7f7;
 }
 .section {
   display: flex;

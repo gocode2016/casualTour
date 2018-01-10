@@ -1,0 +1,39 @@
+/* pages/about/about.wxss */
+page {
+  background: #f7f7f7;
+}
+.cpy {
+  text-indent:80rpx;
+  padding: 60rpx 20rpx 20rpx;
+}
+.sation {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction:column;
+  margin-top: 60rpx;
+
+}
+.f2 {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+ 
+}
+.ft{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 120rpx;
+  width: 100%;
+ color: #929292;
+
+}
+.footer {
+  margin-bottom: 100rpx;
+  margin-top: 100rpx;
+  justify-content: space-between;
+  height: 320rpx;
+}

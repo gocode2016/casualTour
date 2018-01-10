@@ -23,7 +23,7 @@ Page({
       {
         text: '关于够野',
         icon: 'iconfont icon-guanyu',
-        url: '../info/info'
+        url: '../about/about'
       }
     ]
   },
