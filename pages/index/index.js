@@ -48,23 +48,21 @@ Page({
     sightList:[
       {
         id:1,
-        caption:"周边游",
-        title:"牛背山看日出",
+        caption:"周边游 | 牛背山看日出",
         days:3,
         date:"01.12-01.14",
         price:580
       },
       {
         id: 2,
-        caption: "周边游1",
-        title: "牛背山看日出1",
+        caption: "周边游 | 牛背山看日出2",
         days: 3,
         date: "01.12-01.14",
         price: 590
       },
       {
         id: 3,
-        caption: "周边游2",
+        caption: "周边游牛背山看日出3",
         title: "牛背山看日出2",
         days: 3,
         date: "01.12-01.14",
@@ -76,8 +74,7 @@ Page({
     let sightList= [...this.data.sightList,
     {
       id: 4,
-      caption: "周边游22",
-      title: "牛背山看日出2",
+      caption: "周边游牛背山看日出4",
       days: 32,
       date: "01.12-01.14",
       price: 5806

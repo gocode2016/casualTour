@@ -1,0 +1,62 @@
+/**活动详情**/
+.travel-synopsis{
+  margin-top: 10rpx;
+}
+text.title{
+  font-weight: 600;
+  font-size: 40rpx;
+  border-bottom:1px solid #d8d8d8; 
+  display: block;
+  width: 100%;
+  padding-bottom: 10rpx;
+  margin-bottom: 5rpx;
+}
+.outer-box{
+    padding:0 20rpx;
+}
+.travel-synopsis .iconfont{
+  color: #36d9ba;
+}
+.travel-synopsis>view{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.travel-synopsis>view>view{
+  padding:0 30rpx;
+}
+.travel-synopsis>view text{
+  font-size: 35rpx;
+}
+.travel-tips{
+  margin-top: 50rpx;
+}
+.travel-tips>view{
+  padding-left: 30rpx;
+  margin-bottom: 2rpx;
+}
+.travel-tips>view>text{
+  font-size: 35rpx;
+}
+.travel-tips .iconfont{
+  color: #36d9ba;
+}
+.travel-introduce{
+  margin-top: 50rpx;
+  padding: 0 20rpx;
+}
+.travel-introduce>.description{
+ font-size: 35rpx;
+  color: #666;
+}
+.travel-introduce>.route{
+  color: #333;
+  font-weight: 600;
+  display: block;
+  margin-bottom: 5rpx;
+}
+.travel-introduce>.content{
+  margin-bottom: 15rpx;
+  display: block;
+}

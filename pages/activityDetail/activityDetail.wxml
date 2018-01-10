@@ -1,5 +1,4 @@
 <!--活动详情页面-->
-<view>这是详情页面</view>
 <!--轮播-->
   <swiper indicator-dots="{{indicatorDots}}"
           autoplay="{{autoplay}}" 
@@ -15,3 +14,58 @@
     </swiper-item>
   </block>
 </swiper>
+<!--header-->
+<view class="travel-synopsis outer-box">
+  <text class="title">周边游 | 牛背山看日出</text>
+  <view>
+    <view>
+      <i class="iconfont icon-leixing"></i>
+      <text>徒步</text>
+    </view>
+    <view>
+      <i class="iconfont icon-rili"></i>
+      <text>01.12-01.14</text>
+    </view>
+    <view>
+      <i class="iconfont icon-jiage" style="color:#f73352"></i>
+      <text style="color:#f73352">580元/人</text>
+    </view>
+  </view>
+</view>
+<!--出行须知-->
+<view class="travel-tips outer-box">
+  <text class="title">出行须知</text>
+  <view>
+    <i class="iconfont icon-didian"></i>
+    <text>集合地点：</text>
+    <text>四川省成都市青羊区蜀汉路528</text>
+  </view>
+  <view>
+    <i class="iconfont icon-shijian1"></i>
+    <text>集合时间：</text>
+    <text>2018-01-12 19:00:00</text>
+  </view>
+  <view>
+    <i class="iconfont icon-jiezhishijian_wu"></i>
+    <text>截止时间：</text>
+    <text style="color:#f73352">2018-01-11 00:00:00</text>
+  </view>
+</view>
+<!--活动简介-->
+<view class="travel-introduce">
+  <text class="title">活动简介</text>
+  <text class="description" decode="{{true}}" space="{{true}}">&nbsp;&nbsp;&nbsp;&nbsp;牛背山位于四川省雅安市荥经县境内，与泸定县交界，属二郎山分支，原名大矿山、野牛山。是青衣江、大渡河的分水岭，山顶海拔3660米。四面环山中间突起的独特地理位置，使它获得360度全方位“中国最大的观景平台”和绝佳摄影圣地的美称
+  </text>
+</view>
+<!--行程安排-->
+<view class="travel-introduce">
+  <text class="title">行程安排</text>
+  <text class="description route" decode="{{true}}" space="{{true}}">&nbsp;&nbsp;&nbsp;&nbsp;D1:成都一二郎山一冷再镇
+  </text>
+  <text class="description content" decode="{{true}}" space="{{true}}">&nbsp;&nbsp;&nbsp;&nbsp;第一次见到云海，对我心灵的震撼我此生都难忘。早晨七点从鱼进沟开始登山，下午四点到达山顶，五点云海开始翻腾，感觉所有的劳累都被这样美丽的风光驱逐。牛背山的云海是很容易见到的，去过牛背山的人基本都见过云海
+  </text>
+  <text class="description route" decode="{{true}}" space="{{true}}">&nbsp;&nbsp;&nbsp;&nbsp;D2:冷再镇一云海人家一牛背山
+  </text>
+  <text class="description content" decode="{{true}}" space="{{true}}">&nbsp;&nbsp;&nbsp;&nbsp;15年上山、我不是徒步的、包了越野车。我就是纯粹被美景吸引又不想徒步折腾自己，所以联系了越野车师傅。不建议自己开车上山、我们七点从成都出发中午才到了荥经、开到山上花了5个小时、还是非常有经验的师傅
+  </text>
+</view>

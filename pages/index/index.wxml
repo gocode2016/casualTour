@@ -37,8 +37,6 @@
     <view>
       <view class="left-text-type">
         <text>{{item.caption}}</text>
-        <i class="devide-line"></i>
-        <text>{{item.title}}</text>
       </view>
       <view>{{item.days}}日<i class="iconfont icon-rili"></i>{{item.date}}</view>
     </view>
