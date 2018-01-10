@@ -1,6 +1,5 @@
 //index.js
 const app = getApp()
-var order = ['red', 'yellow', 'blue', 'green', 'red']
 Page({
   data: {
     imgUrls: [
@@ -48,6 +47,7 @@ Page({
     ],
     sightList:[
       {
+        id:1,
         caption:"周边游",
         title:"牛背山看日出",
         days:3,
@@ -55,6 +55,7 @@ Page({
         price:580
       },
       {
+        id: 2,
         caption: "周边游1",
         title: "牛背山看日出1",
         days: 3,
@@ -62,6 +63,7 @@ Page({
         price: 590
       },
       {
+        id: 3,
         caption: "周边游2",
         title: "牛背山看日出2",
         days: 3,
@@ -71,15 +73,17 @@ Page({
     ]
   },
   loadMore(){
-    let sightList= [...this.data.sightList, {
-    caption: "周边游22",
-    title: "牛背山看日出2",
-    days: 32,
-    date: "01.12-01.14",
-    price: 5806
-  }]
+    let sightList= [...this.data.sightList,
+    {
+      id: 4,
+      caption: "周边游22",
+      title: "牛背山看日出2",
+      days: 32,
+      date: "01.12-01.14",
+      price: 5806
+    }]
     this.setData({sightList})
-  },
+    },
   onLoad(options) {
     let that = this;
     //获取系统的参数，scrollHeight数值,微信必须要设置style:height才能监听滚动事件
@@ -90,5 +94,9 @@ Page({
         })
       }
     })
+  },
+  turnDetail(e){
+    let index= e.currentTarget.id
+    wx.navigateTo({ url: '/pages/activityDetail/activityDetail?id='+index}) 
   }
 })

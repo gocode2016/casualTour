@@ -33,8 +33,7 @@
   </view> 
 </scroll-view>
 <!--图片区域-->
-
-  <view class="sight" wx:key="" wx:for="{{sightList}}">
+  <view class="sight" wx:key="" wx:for="{{sightList}}" bindtap="turnDetail" id="{{item.id}}">
     <view>
       <view class="left-text-type">
         <text>{{item.caption}}</text>
