@@ -3,7 +3,7 @@
 <scroll-view style="height:{{scrollHeight}}px;" scroll-y="true" bindscrolltolower="loadMore">
   <view class="header">
     <view class="input-box">
-      <input placeholder="活动搜索" maxlength="10" confirm-type="search" class="search-input"/>
+      <input placeholder="活动搜索" placeholder-class="iconfont icon-sousuo-copy"  maxlength="10" confirm-type="search" class="search-input"/>
     </view>
   </view>
 <!--轮播-->

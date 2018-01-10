@@ -33,7 +33,9 @@
 }
 .horizontal-slider{
   margin: 30rpx 0 20rpx 0;
+  -webkit-overflow-scrolling: touch;
 }
+
 .horizontal-slider .item{
   display: inline-block;
   margin-left: 60rpx;

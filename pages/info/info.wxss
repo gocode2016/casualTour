@@ -1,0 +1,32 @@
+/* pages/info/info.wxss */
+page {
+  background: #ebebeb;
+}
+.section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  padding: 30rpx;
+  border-bottom: 1px solid #bbb;
+}
+.lbe {
+
+}
+
+.ipt {
+  width: 400rpx;
+  text-align: right;
+
+}
+.box-btn {
+  padding-top: 40rpx; 
+  border: none;
+}
+.sbtn {
+  margin-top: 60rpx;
+  width: 600rpx;
+  margin: 0 auto;
+  background: #4bb1a7;
+  color: #fff;
+}
