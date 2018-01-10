@@ -12,15 +12,18 @@ Page({
     list: [
       {
         text: '我的资料',
-        icon: 'iconfont icon-myinfo'
+        icon: 'iconfont icon-myinfo',
+        url: '../info/info'
       },
       {
         text: '我的活动',
-        icon: 'iconfont icon-wodehuodong1'
+        icon: 'iconfont icon-wodehuodong1',
+        url: '../info/info'
       },
       {
         text: '关于够野',
-        icon: 'iconfont icon-guanyu'
+        icon: 'iconfont icon-guanyu',
+        url: '../info/info'
       }
     ]
   },
@@ -64,7 +67,12 @@ Page({
       hasUserInfo: true
     })
   },
-
+  goChild: function(url) {
+    console.log(url, 'a')
+    wx.navigateTo({
+      url: url
+    });
+  },
   /**
    * 生命周期函数--监听页面初次渲染完成
    */

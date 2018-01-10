@@ -1,0 +1,28 @@
+<!--pages/info/info.wxml-->
+<view>
+<form bindsubmit="formSubmit" bindreset="formReset">
+
+<view class="section">
+  <label class='lbe'>真实姓名</label>
+  <input type="text" placeholder="真实姓名" class="ipt" />
+</view>
+<view class="section">
+  <label class='lbe'>身份证号</label>
+  <input type="idcard" placeholder="真实身份证号" class="ipt" />
+</view>
+<view class="section">
+  <label class='lbe'>手机号码</label>
+  <input type="number" placeholder="本人手机号" class="ipt" />
+</view>
+<view class="section">
+  <label class='lbe'>紧急联系人</label>
+  <input type="text" placeholder="紧急联系人真实姓名" class="ipt" />
+</view>
+
+<view class="section">
+  <label class='lbe'>紧急联系人电话</label>
+  <input type="number" placeholder="紧急联系人手机号" class="ipt" />
+</view>
+<view class='section box-btn'><button class="sbtn">保存</button></view>
+</form>
+</view>

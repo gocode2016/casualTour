@@ -1,54 +1,94 @@
 //index.js
-//获取应用实例
 const app = getApp()
-
+var order = ['red', 'yellow', 'blue', 'green', 'red']
 Page({
   data: {
-    motto: 'Hello World',
-    userInfo: {},
-    hasUserInfo: false,
-    canIUse: wx.canIUse('button.open-type.getUserInfo')
+    imgUrls: [
+      'http://img02.tooopen.com/images/20150928/tooopen_sy_143912755726.jpg',
+      'http://img06.tooopen.com/images/20160818/tooopen_sy_175866434296.jpg',
+      'http://img06.tooopen.com/images/20160818/tooopen_sy_175833047715.jpg'
+    ],
+    indicatorDots: true,
+    autoplay: true,
+    interval: 3000,
+    duration: 800,
+    toView: 'red',
+    scrollTop: 100,
+    activeList:[
+      {
+        text:"滑雪",
+        classType:"ski",
+        icon:"icon-huaxue"
+      },
+      {
+        text: "徒步",
+        classType: "onfoot",
+        icon: "icon-tubulvxing"
+      },
+      {
+        text: "攀岩",
+        classType: "rock",
+        icon: "icon-panyan"
+      },
+      {
+        text: "登山",
+        classType: "mountain",
+        icon: "icon-dengshan01"
+      },
+      {
+        text: "自驾",
+        classType: "drive",
+        icon: "icon-zijia"
+      },
+      {
+        text: "赛事",
+        classType: "match",
+        icon: "icon-saishi"
+      }
+    ],
+    sightList:[
+      {
+        caption:"周边游",
+        title:"牛背山看日出",
+        days:3,
+        date:"01.12-01.14",
+        price:580
+      },
+      {
+        caption: "周边游1",
+        title: "牛背山看日出1",
+        days: 3,
+        date: "01.12-01.14",
+        price: 590
+      },
+      {
+        caption: "周边游2",
+        title: "牛背山看日出2",
+        days: 3,
+        date: "01.12-01.14",
+        price: 600
+      }
+    ]
   },
-  //事件处理函数
-  bindViewTap: function() {
-    wx.navigateTo({
-      url: '../logs/logs'
-    })
+  loadMore(){
+    let sightList= [...this.data.sightList, {
+    caption: "周边游22",
+    title: "牛背山看日出2",
+    days: 32,
+    date: "01.12-01.14",
+    price: 5806
+  }]
+    this.setData({sightList})
   },
-  onLoad: function () {
-    if (app.globalData.userInfo) {
-      this.setData({
-        userInfo: app.globalData.userInfo,
-        hasUserInfo: true
-      })
-    } else if (this.data.canIUse){
-      // 由于 getUserInfo 是网络请求，可能会在 Page.onLoad 之后才返回
-      // 所以此处加入 callback 以防止这种情况
-      app.userInfoReadyCallback = res => {
-        this.setData({
-          userInfo: res.userInfo,
-          hasUserInfo: true
+  onLoad(options) {
+    let that = this;
+    //获取系统的参数，scrollHeight数值,微信必须要设置style:height才能监听滚动事件
+    wx.getSystemInfo({
+      success(res){
+        that.setData({
+          scrollHeight: parseInt(res.windowHeight) + 200
         })
       }
-    } else {
-      // 在没有 open-type=getUserInfo 版本的兼容处理
-      wx.getUserInfo({
-        success: res => {
-          app.globalData.userInfo = res.userInfo
-          this.setData({
-            userInfo: res.userInfo,
-            hasUserInfo: true
-          })
-        }
-      })
-    }
-  },
-  getUserInfo: function(e) {
-    console.log(e)
-    app.globalData.userInfo = e.detail.userInfo
-    this.setData({
-      userInfo: e.detail.userInfo,
-      hasUserInfo: true
     })
   }
 })

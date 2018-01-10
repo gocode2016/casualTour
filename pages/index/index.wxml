@@ -1,14 +1,50 @@
 <!--index.wxml-->
-<view class="container">
-  <view class="userinfo">
-    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
-    <block wx:else>
-      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
-      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
-    </block>
+<!--搜索头部-->
+<scroll-view style="height:{{scrollHeight}}px;" scroll-y="true" bindscrolltolower="loadMore">
+  <view class="header">
+    <view class="input-box">
+      <input placeholder="活动搜索" placeholder-class="iconfont icon-sousuo-copy"  maxlength="10" confirm-type="search" class="search-input"/>
+    </view>
   </view>
-  <view class="usermotto">
-    <text class="iconfont icon-tubu">123</text>
-    <text class="user-motto">{{motto}}</text>
+<!--轮播-->
+  <swiper indicator-dots="{{indicatorDots}}"
+          autoplay="{{autoplay}}" 
+          interval="{{interval}}" 
+          duration="{{duration}}"
+          indicator-active-color="#36d9ba"
+          circular="true"
+          class="swiper"
+          >
+  <block wx:for="{{imgUrls}}" wx:key="">
+    <swiper-item>
+      <image src="{{item}}" class="slide-image"/>
+    </swiper-item>
+  </block>
+</swiper>
+<!--左右滑动区域-->
+<scroll-view class="horizontal-slider" scroll-x="true" style="width: 100%;white-space:nowrap; display:flex">
+  <view wx:key="" wx:for="{{activeList}}" class="{{item.classType}} item">
+    <view><i class="iconfont {{item.icon}}"></i></view>
+    <text>{{item.text}}</text>
   </view>
-</view>
+   <view class="drive item">
+    <view><i class="iconfont icon-zijia"></i></view>
+    <text>自驾</text>
+  </view> 
+</scroll-view>
+<!--图片区域-->
+
+  <view class="sight" wx:key="" wx:for="{{sightList}}">
+    <view>
+      <view class="left-text-type">
+        <text>{{item.caption}}</text>
+        <i class="devide-line"></i>
+        <text>{{item.title}}</text>
+      </view>
+      <view>{{item.days}}日<i class="iconfont icon-rili"></i>{{item.date}}</view>
+    </view>
+    <view>
+      <text>{{item.price}}元/人</text>
+    </view>
+  </view>
+</scroll-view>
