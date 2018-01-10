@@ -1,8 +1,9 @@
 <!--index.wxml-->
 <!--搜索头部-->
+<scroll-view style="height:{{scrollHeight}}px;" scroll-y="true" bindscrolltolower="loadMore">
   <view class="header">
     <view class="input-box">
-      <input placeholder="活动搜索" maxlength="10" confirm-type="search" class="search-input" focus/>
+      <input placeholder="活动搜索" maxlength="10" confirm-type="search" class="search-input"/>
     </view>
   </view>
 <!--轮播-->
@@ -21,43 +22,29 @@
   </block>
 </swiper>
 <!--左右滑动区域-->
-<scroll-view scroll-x="true" style="width: 100%;white-space:nowrap; display:flex">
-  <view class="ski item first-item">
-    <view><i class="iconfont icon-huaxue"></i></view>
-    <text>滑雪</text>
-  </view>
-  <view class="onfoot item">
-    <view><i class="iconfont icon-tubulvxing"></i></view>
-    <text>徒步</text>
-  </view>
-  <view class="rock item">
-    <view><i class="iconfont icon-panyan"></i></view>
-    <text>攀岩</text>
-  </view>
-  <view class="mountain item">
-    <view><i class="iconfont icon-dengshan01"></i></view>
-    <text>登山</text>
+<scroll-view class="horizontal-slider" scroll-x="true" style="width: 100%;white-space:nowrap; display:flex">
+  <view wx:key="" wx:for="{{activeList}}" class="{{item.classType}} item">
+    <view><i class="iconfont {{item.icon}}"></i></view>
+    <text>{{item.text}}</text>
   </view>
    <view class="drive item">
     <view><i class="iconfont icon-zijia"></i></view>
     <text>自驾</text>
   </view> 
-   <view class="match item">
-    <view><i class="iconfont icon-saishi"></i></view>
-    <text>赛事</text>
-  </view>
 </scroll-view>
 <!--图片区域-->
-<view class='sight'>
-    <image src="../../assets/imgs/sight1.jpg"></image>  
-  <view class='img-caption'>
-     <view>
-      <view>
-        <text>周边游</text>
-        <text>牛背上看日出</text>
+
+  <view class="sight" wx:key="" wx:for="{{sightList}}">
+    <view>
+      <view class="left-text-type">
+        <text>{{item.caption}}</text>
+        <i class="devide-line"></i>
+        <text>{{item.title}}</text>
       </view>
-      <text>3日 01.12-01.14</text>
-     </view>
-     <view><text>580元/人</text></view>
+      <view>{{item.days}}日<i class="iconfont icon-rili"></i>{{item.date}}</view>
+    </view>
+    <view>
+      <text>{{item.price}}元/人</text>
+    </view>
   </view>
-</view>
+</scroll-view>

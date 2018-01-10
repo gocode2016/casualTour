@@ -13,30 +13,82 @@ Page({
     interval: 3000,
     duration: 800,
     toView: 'red',
-    scrollTop: 100
-  },
-  upper: function (e) {
-    console.log(e)
-  },
-  lower: function (e) {
-    console.log(e)
-  },
-  scroll: function (e) {
-    console.log(e)
-  },
-  tap: function (e) {
-    for (var i = 0; i < order.length; ++i) {
-      if (order[i] === this.data.toView) {
-        this.setData({
-          toView: order[i + 1]
-        })
-        break
+    scrollTop: 100,
+    activeList:[
+      {
+        text:"滑雪",
+        classType:"ski",
+        icon:"icon-huaxue"
+      },
+      {
+        text: "徒步",
+        classType: "onfoot",
+        icon: "icon-tubulvxing"
+      },
+      {
+        text: "攀岩",
+        classType: "rock",
+        icon: "icon-panyan"
+      },
+      {
+        text: "登山",
+        classType: "mountain",
+        icon: "icon-dengshan01"
+      },
+      {
+        text: "自驾",
+        classType: "drive",
+        icon: "icon-zijia"
+      },
+      {
+        text: "赛事",
+        classType: "match",
+        icon: "icon-saishi"
       }
-    }
+    ],
+    sightList:[
+      {
+        caption:"周边游",
+        title:"牛背山看日出",
+        days:3,
+        date:"01.12-01.14",
+        price:580
+      },
+      {
+        caption: "周边游1",
+        title: "牛背山看日出1",
+        days: 3,
+        date: "01.12-01.14",
+        price: 590
+      },
+      {
+        caption: "周边游2",
+        title: "牛背山看日出2",
+        days: 3,
+        date: "01.12-01.14",
+        price: 600
+      }
+    ]
   },
-  tapMove: function (e) {
-    this.setData({
-      scrollTop: this.data.scrollTop + 10
+  loadMore(){
+    let sightList= [...this.data.sightList, {
+    caption: "周边游22",
+    title: "牛背山看日出2",
+    days: 32,
+    date: "01.12-01.14",
+    price: 5806
+  }]
+    this.setData({sightList})
+  },
+  onLoad(options) {
+    let that = this;
+    //获取系统的参数，scrollHeight数值,微信必须要设置style:height才能监听滚动事件
+    wx.getSystemInfo({
+      success(res){
+        that.setData({
+          scrollHeight: parseInt(res.windowHeight) + 200
+        })
+      }
     })
   }
 })
