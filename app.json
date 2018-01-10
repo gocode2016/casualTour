@@ -2,6 +2,7 @@
   "pages":[
     "pages/index/index",
     "pages/my/my",
+    "pages/info/info",
     "pages/activityDetail/activityDetail"
   ],
   "window":{
