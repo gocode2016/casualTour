@@ -1,28 +1,30 @@
 <!--pages/info/info.wxml-->
+<import src="../../components/toast/toast.wxml" />
+<template is="toast" data="{{..._toast_}}" />
 <view>
 <form bindsubmit="formSubmit" bindreset="formReset">
 
 <view class="section">
   <label class='lbe'>真实姓名</label>
-  <input type="text" placeholder="真实姓名" class="ipt" />
+  <input type="text" placeholder="真实姓名" name="name" class="ipt" value='{{form.name}}' />
 </view>
 <view class="section">
   <label class='lbe'>身份证号</label>
-  <input type="idcard" placeholder="真实身份证号" class="ipt" />
+  <input type="idcard" placeholder="真实身份证号" name="idcard"  class="ipt" value='{{form.idcard}}'/>
 </view>
 <view class="section">
   <label class='lbe'>手机号码</label>
-  <input type="number" placeholder="本人手机号" class="ipt" />
+  <input type="number" placeholder="本人手机号"  name="moble"  class="ipt" value='{{form.moble}}'/>
 </view>
 <view class="section">
   <label class='lbe'>紧急联系人</label>
-  <input type="text" placeholder="紧急联系人真实姓名" class="ipt" />
+  <input type="text" placeholder="紧急联系人真实姓名" name="contact"  class="ipt" value='{{form.contact}}'/>
 </view>
 
 <view class="section">
   <label class='lbe'>紧急联系人电话</label>
-  <input type="number" placeholder="紧急联系人手机号" class="ipt" />
+  <input type="number" placeholder="紧急联系人手机号" name="contactTel"   class="ipt"  value='{{form.contactTel}}'/>
 </view>
-<view class='section box-btn'><button class="sbtn">保存</button></view>
+<view class='section box-btn'><button class="sbtn" formType="submit" >保存</button></view>
 </form>
 </view>

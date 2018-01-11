@@ -1,5 +1,8 @@
 //app.js
+var ToastPannel = require('./components/toast/toast').ToastPannel;
+
 App({
+  ToastPannel,
   onLaunch: function () {
     // 展示本地存储能力
     var logs = wx.getStorageSync('logs') || []

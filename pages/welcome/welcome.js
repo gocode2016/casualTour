@@ -1,42 +1,14 @@
 // pages/welcome/welcome.js
+
+
+
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    activeList: [
-      {
-        text: "滑雪",
-        classType: "ski",
-        icon: "icon-huaxue"
-      },
-      {
-        text: "徒步",
-        classType: "onfoot",
-        icon: "icon-tubulvxing"
-      },
-      {
-        text: "攀岩",
-        classType: "rock",
-        icon: "icon-panyan"
-      },
-      {
-        text: "登山",
-        classType: "mountain",
-        icon: "icon-dengshan01"
-      },
-      {
-        text: "自驾",
-        classType: "drive",
-        icon: "icon-zijia"
-      },
-      {
-        text: "赛事",
-        classType: "match",
-        icon: "icon-saishi"
-      }
-    ]
+   
   },
 
   /**
@@ -48,6 +20,9 @@ Page({
         url: '../index/index',
       })
     },3000)
+
+
+
   },
 
   /**

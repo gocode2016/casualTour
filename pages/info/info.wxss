@@ -10,9 +10,7 @@ page {
   padding: 30rpx;
   border-bottom: 1px solid #bbb;
 }
-.lbe {
 
-}
 
 .ipt {
   width: 400rpx;

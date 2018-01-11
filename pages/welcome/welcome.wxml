@@ -1,6 +1,8 @@
 <!--pages/welcome/welcome.wxml-->
+
 <view class="container">
    <view class="wc">
       <text>我是欢迎页面，欢迎您进入...</text>
    </view>
+
 </view>
