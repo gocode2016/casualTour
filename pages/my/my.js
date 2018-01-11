@@ -18,7 +18,7 @@ Page({
       {
         text: '我的活动',
         icon: 'iconfont icon-wodehuodong1',
-        url: '../info/info'
+        url: '../myActivity/myActivity'
       },
       {
         text: '关于够野',

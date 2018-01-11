@@ -4,7 +4,9 @@
     "pages/my/my",
     "pages/info/info",
     "pages/activityDetail/activityDetail",
-    "pages/about/about"
+    "pages/about/about",
+    "pages/myActivity/myActivity"
+
   ],
   "window":{
     "backgroundTextStyle":"light",
