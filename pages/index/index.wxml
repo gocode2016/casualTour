@@ -22,7 +22,7 @@
   </block>
 </swiper>
 <!--左右滑动区域-->
-<scroll-view class="horizontal-slider" scroll-x="true" style="width: 100%;white-space:nowrap; display:flex">
+<scroll-view class="horizontal-slider" scroll-x="true" style="width: 100%;height:160rpx;white-space:nowrap; ">
   <view wx:key="" wx:for="{{activeList}}" class="{{item.classType}} item">
     <view><i class="iconfont {{item.icon}}"></i></view>
     <text>{{item.text}}</text>
