@@ -69,3 +69,12 @@
   <text class="description content" decode="{{true}}" space="{{true}}">&nbsp;&nbsp;&nbsp;&nbsp;15年上山、我不是徒步的、包了越野车。我就是纯粹被美景吸引又不想徒步折腾自己，所以联系了越野车师傅。不建议自己开车上山、我们七点从成都出发中午才到了荥经、开到山上花了5个小时、还是非常有经验的师傅
   </text>
 </view>
+
+<view class="ft-zx">
+   <view class="zx" bindtap="callPhone" data-phone="{{tel}}">
+     咨询
+   </view>
+   <view class="bm">
+      报名结束
+   </view>
+</view>

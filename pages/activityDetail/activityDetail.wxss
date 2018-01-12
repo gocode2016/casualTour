@@ -43,8 +43,8 @@ text.title{
   color: #36d9ba;
 }
 .travel-introduce{
-  margin-top: 50rpx;
-  padding: 0 20rpx;
+  margin: 50rpx 0;
+  padding: 0 20rpx 100rpx;
 }
 .travel-introduce>.description{
  font-size: 35rpx;
@@ -59,4 +59,31 @@ text.title{
 .travel-introduce>.content{
   margin-bottom: 15rpx;
   display: block;
+}
+
+.ft-zx {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #fff;
+  height: 100rpx;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+.zx {
+  width: 30%;
+  text-align: center;
+  height: 100rpx;
+  background: #36d9ba;
+  line-height: 100rpx;
+}
+
+.bm {
+  width: 70%;
+  text-align: center;
+  height: 100rpx;
+  background: #666;
+  line-height: 100rpx;
+
 }
