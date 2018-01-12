@@ -1,7 +1,15 @@
 <!--pages/welcome/welcome.wxml-->
 
 <view class="container">
-   <view class="wc">
-      <text>我是欢迎页面，欢迎您进入...</text>
-   </view>
+  <view class="wc">
+    <text>我是欢迎页面，欢迎您进入...</text>
+  </view>
+
+
+</view>
+
+<view class='start'>
+   <block  wx:for="{{stars}}" wx:key="unque">
+      <image bindtap="clickStar"  src="{{item.url}}" data-id="{{item.id}}"  data-status="{{item.status}}" style='width:64px;height:64px;'></image>
+    </block>
 </view>
